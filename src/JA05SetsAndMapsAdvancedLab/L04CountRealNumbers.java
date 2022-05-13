@@ -6,7 +6,7 @@ Write a program that counts the occurrence of real numbers. The input is a singl
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class X04CountRealNumbers {
+public class L04CountRealNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double[] input = Arrays.stream(scanner.nextLine().split(" ")).mapToDouble(Double::parseDouble).toArray();
