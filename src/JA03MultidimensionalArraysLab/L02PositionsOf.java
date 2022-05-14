@@ -1,4 +1,5 @@
-package JAMultidimensionalArraysLab;
+package JA03MultidimensionalArraysLab;
+
 /*
 Write a program that reads a matrix of integers from the console, then a number, and prints all the positions at which that number appears in the matrix.
 The matrix definition on the console will contain a line with two positive integer numbers R and C – the number of rows and columns in the matrix – followed by R lines, each containing C numbers (separated by spaces), representing each row of the matrix.
