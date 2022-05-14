@@ -1,7 +1,4 @@
-package JAMultidimensionalArraysLab;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package JA03MultidimensionalArraysLab;
 
 /*
 Write a program that reads two integer matrices (2D arrays) from the console and compares them element by element. For better code reusability, you could do the comparison in a method, which returns true if they are equal and false if not.
@@ -9,6 +6,10 @@ Each matrix definition on the console will contain a line with a positive intege
 The matrices will have at most 10 rows and at most 10 columns.
 Print "equal" if the matrices match, and "not equal" if they don’t match.
  */
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class L01CompareMatrices {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -28,7 +29,7 @@ public class L01CompareMatrices {
         int rows2 = rowCol2[0];
         int cols2 = rowCol2[1];
 
-        if((rows1 != rows2) || (cols1 != cols2)){
+        if ((rows1 != rows2) || (cols1 != cols2)) {
             System.out.println("not equal");
             return;
         }
@@ -42,7 +43,7 @@ public class L01CompareMatrices {
 
         for (int row = 0; row < rows1; row++) {
             for (int col = 0; col < cols1; col++) {
-                if(matrix1[row][col] != matrix2[row][col]){
+                if (matrix1[row][col] != matrix2[row][col]) {
                     System.out.println("not equal");
                     return;
                 }
