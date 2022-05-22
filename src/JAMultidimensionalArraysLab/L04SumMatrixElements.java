@@ -20,7 +20,7 @@ public class L04SumMatrixElements {
 
         int sum = 0;
         for (int row = 0; row < rows; row++) {
-            int[] rowOfMatrix = Arrays.stream(scanner.nextLine().split(", ")).mapToInt(Integer::parseInt).toArray();
+            int[] rowOfMatrix = Arrays.stream(scanner.nextLine().split(", ")).mapToInt(Integer::parseInt).toArray() ;
             for (int col = 0; col < cols; col++) {
                 matrix[row][col] = rowOfMatrix[col];
                 sum += matrix[row][col];
