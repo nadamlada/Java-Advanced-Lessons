@@ -1,4 +1,4 @@
-package JAStacksAndQueuesExercises_;
+package JAStacksAndQueuesExercises;
 /*
 Each member of the Fibonacci sequence is calculated from the sum of the two previous members. The first two elements are 1, 1. Therefore, the sequence goes like 1, 1, 2, 3, 5, 8, 13, 21, 34…
 The following sequence can be generated with an array, but that’s easy, so your task is to implement it recursively.
@@ -20,34 +20,38 @@ If you want to figure out how to skip those unnecessary calculations, you can se
 
  */
 
-import java.util.ArrayDeque;
 import java.util.Scanner;
 
-public class X06RecursiveFibonacciSTACK {
+public class X06RecursiveFibonacci {
+    //правиш тук масива, за да можеш за го ползваш и в мейна, и в метода
+    public static long[] memory;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //index // 0 1 2 3 4 5 6  7  8  9 10
         //number// 1 1 2 3 5 8 13 21 34
+
         int n = Integer.parseInt(scanner.nextLine());
-
-        ArrayDeque<Long>stack = new ArrayDeque<>();
-
-        if (n<2){
-            System.out.println(1);
+        memory = new long[n + 1];
+        if (n == 0) {
+            System.out.println(0);
             return;
         }
 
-        stack.push(0L);
-        stack.push(1L);
+        //рекурсия с меморизация
+        long result = fib(n);
+        System.out.println(result);
+    }
 
-        for (int i = 1; i <= n; i++) {
-            long num1 = stack.pop();
-            long num2 = stack.pop();
-            stack.push(num1);
-            stack.push(num1 + num2);
+    private static long fib(int n) {
+        if (n < 2) {
+            return 1;
+        }
+        if (memory[n] != 0) {
+            return memory[n];
         }
 
-        System.out.println(stack.pop());
+        memory[n] = fib(n - 1) + fib(n - 2);
+        return memory[n];
     }
 }

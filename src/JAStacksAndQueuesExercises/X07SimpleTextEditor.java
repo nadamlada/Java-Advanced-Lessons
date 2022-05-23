@@ -1,4 +1,4 @@
-package JAStacksAndQueuesExercises_;
+package JAStacksAndQueuesExercises;
 /*
 You are given an empty text. Your task is to implement 4 types of commands related to manipulating the text:
 •	"1 {string}" - appends [string] to the end of the text.

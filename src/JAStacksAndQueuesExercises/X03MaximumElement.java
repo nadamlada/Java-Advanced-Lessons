@@ -1,4 +1,4 @@
-package JAStacksAndQueuesExercises_;
+package JAStacksAndQueuesExercises;
 /*
 You have an empty sequence, and you will be given N commands. Each command is one of the following types:
 •	"1 X" - Push the element X into the stack.
