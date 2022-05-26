@@ -1,8 +1,4 @@
-package JAMultidimensionalArraysExercises;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+package JA04MultidimensionalArraysExercises;
 
 /*
 You are given a sequence of text lines. Assume these text lines form a matrix of characters (pad the missing positions with spaces to build a rectangular matrix). Write a program to rotate the matrix by 90, 180, 270, 360,… degrees. Print the result at the console as a sequence of strings after receiving the "END" command.
@@ -21,6 +17,11 @@ Constraints
 •	Allowed working time: 200ms/16MB.
 
  */
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class X06StringMatrixRotation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -54,6 +55,7 @@ public class X06StringMatrixRotation {
         }
 
         char[][] matrix = new char[rows][cols];
+
         for (int row = 0; row < rows; row++) {
             String currentWord = list.get(row);
 
@@ -107,7 +109,7 @@ public class X06StringMatrixRotation {
                     }
                     System.out.println();
                 }
-                    break;
+                break;
         }
     }
 }
