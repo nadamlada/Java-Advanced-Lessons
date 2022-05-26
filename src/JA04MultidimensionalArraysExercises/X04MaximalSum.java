@@ -1,7 +1,4 @@
-package JAMultidimensionalArraysExercises;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package JA04MultidimensionalArraysExercises;
 
 /*
 Write a program that reads a rectangular integer matrix of size N x M and finds in it the square 3 x 3 that has a maximal sum of its elements.
@@ -11,6 +8,10 @@ Input
 Print the elements of the 3 x 3 square as a matrix, along with their sum. See the format of the output below.
 
  */
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class X04MaximalSum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
