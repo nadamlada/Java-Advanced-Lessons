@@ -1,4 +1,4 @@
-package JAStacksAndQueuesLab;
+package JA01StacksAndQueuesLab;
 /*
 Write a program, which takes 2 types of browser instructions:
 •	Normal navigation: a URL is set, given by a string;
