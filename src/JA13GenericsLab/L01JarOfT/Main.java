@@ -31,6 +31,5 @@ public class Main {
 
         System.out.println(jar2.remove());
         System.out.println(jar2.remove());
-
     }
 }
