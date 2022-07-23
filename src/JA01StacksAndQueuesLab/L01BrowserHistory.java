@@ -18,10 +18,12 @@ public class L01BrowserHistory {
         String input = scanner.nextLine();
 
         String currentUrl = "";
+
         while (!input.equals("Home")) {
 
             if (input.equals("back")) {
                 //back
+
                 if (browserHistory.size() > 1) {
                     //премахваме
                     browserHistory.pop();
@@ -37,6 +39,7 @@ public class L01BrowserHistory {
                 currentUrl = browserHistory.peek();
                 System.out.println(currentUrl);
             }
+
             input = scanner.nextLine();
         }
     }
