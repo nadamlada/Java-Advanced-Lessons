@@ -1,8 +1,8 @@
-package JAStacksAndQueuesLab;
+package JA01StacksAndQueuesLab;
+
 /*
 Create a simple calculator that can evaluate simple expressions that will not hold any operator different from addition and subtraction. There will not be parentheses or operator precedence.
 Solve the problem using a Stack.
-
  */
 
 import java.util.ArrayDeque;
@@ -29,10 +29,11 @@ public class L02SimpleCalculator {
                 //substract
                 result = firstNumber - secondNumber;
             }
+
             tokens.push(result + "");
             //tokens.push(String.valueOf(result));
-
         }
+
         System.out.println(tokens.peek());
     }
 }
