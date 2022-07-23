@@ -1,4 +1,5 @@
-package JAStacksAndQueuesLab;
+package JA01StacksAndQueuesLab;
+
 /*
 We are given an arithmetical expression with brackets. Scan through the string and extract each sub-expression.
 Print the result back at the terminal.
@@ -22,7 +23,7 @@ public class L04MatchingBrackets {
             } else if (current == ')') {
                 int lastOpenedIndex = openIndexes.pop();
 
-                String matchingBrackets = expression.substring(lastOpenedIndex, i+1);
+                String matchingBrackets = expression.substring(lastOpenedIndex, i + 1);
                 System.out.println(matchingBrackets);
             }
         }
