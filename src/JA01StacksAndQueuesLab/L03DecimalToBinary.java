@@ -1,8 +1,8 @@
-package JAStacksAndQueuesLab;
+package JA01StacksAndQueuesLab;
+
 /*
 Create a simple program that can convert a decimal number to its binary representation. Implement an elegant solution using a Stack.
 Print the binary representation back at the terminal.
-
  */
 
 import java.util.ArrayDeque;
@@ -15,6 +15,7 @@ public class L03DecimalToBinary {
         int decimal = Integer.parseInt(scanner.nextLine());
         ArrayDeque<Integer> stack = new ArrayDeque<>();
         //в двоична бройна система нулата е също нула
+
         if (decimal == 0) {
             System.out.println(0);
         } else {
