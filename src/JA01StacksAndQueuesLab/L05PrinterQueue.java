@@ -1,8 +1,8 @@
-package JAStacksAndQueuesLab;
+package JA01StacksAndQueuesLab;
+
 /*
 The printer queue is a simple way to control the order of files sent to a printer device. We know that a single printer can be shared between multiple devices. So to preserve the order of the files sent, we can use a queue.
 Write a program, which takes filenames until the "print" command is received. Then as output print the filenames in the order of printing. Some of the tasks may be canceled if you receive "cancel" you have to remove the first file to be printed. If there is no current file to be printed print "Printer is on standby".
-
  */
 
 import java.util.ArrayDeque;
@@ -15,8 +15,9 @@ public class L05PrinterQueue {
         ArrayDeque<String> files = new ArrayDeque<>();
 
         while (!input.equals("print")) {
+
             if (input.equals("cancel")) {
-                //
+
                 if (files.isEmpty()) {
                     System.out.println("Printer is on standby");
                 } else {
@@ -25,7 +26,6 @@ public class L05PrinterQueue {
                     String firstFileInQueue = files.poll();
                     System.out.printf("Canceled %s%n", firstFileInQueue);
                 }
-
             } else {
                 //we have file
                 // add in queue
@@ -34,6 +34,7 @@ public class L05PrinterQueue {
 
             input = scanner.nextLine();
         }
+
         for (String file : files) {
             System.out.println(file);
         }
