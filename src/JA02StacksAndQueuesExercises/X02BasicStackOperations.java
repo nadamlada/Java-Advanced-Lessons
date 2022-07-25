@@ -1,4 +1,5 @@
-package JAStacksAndQueuesExercises;
+package JA02StacksAndQueuesExercises;
+
 /*
 You will be given an integer N representing the number of elements to push into the stack, an integer S representing the number of elements to pop from the stack, and finally an integer X, an element that you should check whether is present in the stack. If it is, print "true" on the console. If it’s not, print the smallest element currently present in the stack.
 Input
@@ -7,7 +8,6 @@ Input
 Output
 •	On a single line print, either "true" if X is present in the stack, otherwise print the smallest element in the stack.
 •	If the stack is empty – print 0.
-
  */
 
 import java.util.ArrayDeque;
@@ -26,6 +26,7 @@ public class X02BasicStackOperations {
         int[] data = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         ArrayDeque<Integer> stack = new ArrayDeque<>();
+
         for (int i = 0; i < elementsToPush; i++) {
             //или без да правя втори масив -> stack.push(Scanner.nextInt());
             stack.push(data[i]);
