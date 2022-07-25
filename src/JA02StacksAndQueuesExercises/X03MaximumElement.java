@@ -1,4 +1,5 @@
-package JAStacksAndQueuesExercises;
+package JA02StacksAndQueuesExercises;
+
 /*
 You have an empty sequence, and you will be given N commands. Each command is one of the following types:
 •	"1 X" - Push the element X into the stack.
@@ -11,7 +12,6 @@ Input
 •	The type of the command will be in the range 1 ≤ Type ≤ 3.
 Output
 •	For each command of type "3", print the maximum element in the stack on a new line.
-
  */
 
 import java.util.ArrayDeque;
@@ -30,6 +30,7 @@ public class X03MaximumElement {
             String[] input = scanner.nextLine().split(" ");
 
             if (input.length == 1) {
+
                 if (input[0].equals("2")) {
                     stack.pop();
                 } else {
