@@ -1,7 +1,4 @@
-package JAMultidimensionalArraysLab;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package JA03MultidimensionalArraysLab;
 
 /*
 Write a program that reads a matrix from the console and prints:
@@ -10,6 +7,10 @@ Write a program that reads a matrix from the console and prints:
 •	The sum of all matrix’s elements
 On the first line, you will get the dimensions of the matrix in the format "{rows, columns}". On the next lines, you will get the elements for each row separated by a comma.
  */
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class L04SumMatrixElements {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +21,7 @@ public class L04SumMatrixElements {
 
         int sum = 0;
         for (int row = 0; row < rows; row++) {
-            int[] rowOfMatrix = Arrays.stream(scanner.nextLine().split(", ")).mapToInt(Integer::parseInt).toArray() ;
+            int[] rowOfMatrix = Arrays.stream(scanner.nextLine().split(", ")).mapToInt(Integer::parseInt).toArray();
             for (int col = 0; col < cols; col++) {
                 matrix[row][col] = rowOfMatrix[col];
                 sum += matrix[row][col];
