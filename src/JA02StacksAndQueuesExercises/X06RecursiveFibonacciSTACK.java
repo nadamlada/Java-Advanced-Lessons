@@ -1,4 +1,5 @@
-package JAStacksAndQueuesExercises;
+package JA02StacksAndQueuesExercises;
+
 /*
 Each member of the Fibonacci sequence is calculated from the sum of the two previous members. The first two elements are 1, 1. Therefore, the sequence goes like 1, 1, 2, 3, 5, 8, 13, 21, 34…
 The following sequence can be generated with an array, but that’s easy, so your task is to implement it recursively.
@@ -17,7 +18,6 @@ Hint
 For the nth Fibonacci number, we calculate the N-1st and the N-2nd number, but for the calculation of N-1st number we calculate the N-1-1st(N-2nd) and the N-1-2nd number, so we have a lot of repeated calculations.
 
 If you want to figure out how to skip those unnecessary calculations, you can search for a technique called memoization.
-
  */
 
 import java.util.ArrayDeque;
