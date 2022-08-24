@@ -1,4 +1,4 @@
-package JAMultidimensionalArraysLab;
+package JA03MultidimensionalArraysLab;
 /*
 You will be given the rows of a matrix. Then the matrix itself. Inside this matrix, there are mistaken values that need to be replaced you will receive the wrong value at the last line. Those values should be replaced with the sum of the nearest elements in the four directions up, down, left, and right, but only if they are valid values. In the end, you have to print the fixed measurements.
  */
@@ -34,6 +34,7 @@ public class L08WrongMeasurements {
         int[][] blank = new int[rows][cols];
 
         for (int row = 0; row < rows; row++) {
+
             for (int col = 0; col < cols; col++) {
 
                 if (matrix[row][col] == searchedNum) {
@@ -41,8 +42,10 @@ public class L08WrongMeasurements {
                     //с кое число да се замени
 
                     int sumForReplacement = 0;
+
                     if (row > 0) {
                         int upElement = matrix[row - 1][col];
+
                         if (upElement != searchedNum) {
                             sumForReplacement += upElement;
                         }
@@ -50,6 +53,7 @@ public class L08WrongMeasurements {
 
                     if (row + 1 < rows) {
                         int downElement = matrix[row + 1][col];
+
                         if (downElement != searchedNum) {
                             sumForReplacement += downElement;
                         }
@@ -57,6 +61,7 @@ public class L08WrongMeasurements {
 
                     if (col + 1 < cols) {
                         int rightElement = matrix[row][col + 1];
+
                         if (rightElement != searchedNum) {
                             sumForReplacement += rightElement;
                         }
@@ -64,6 +69,7 @@ public class L08WrongMeasurements {
 
                     if (col > 0) {
                         int leftElement = matrix[row][col - 1];
+
                         if (leftElement != searchedNum) {
                             sumForReplacement += leftElement;
                         }
@@ -79,9 +85,11 @@ public class L08WrongMeasurements {
         }
 
         for (int[] ints : blank) {
+
             for (int i : ints) {
                 System.out.print(i + " ");
             }
+
             System.out.println();
         }
     }
