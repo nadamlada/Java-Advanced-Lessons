@@ -1,4 +1,5 @@
-package JAStacksAndQueuesExercises;
+package JA02StacksAndQueuesExercises;
+
 /*
 You are given an empty text. Your task is to implement 4 types of commands related to manipulating the text:
 •	"1 {string}" - appends [string] to the end of the text.
@@ -13,7 +14,6 @@ Input
 •	It is guaranteed that the sequence of input operations is possible to perform.
 Output
 •	For each operation of type "3" print a single line with the returned character of that operation.
-
  */
 
 import java.util.ArrayDeque;
@@ -33,6 +33,7 @@ public class X07SimpleTextEditor {
         for (int i = 0; i < n; i++) {
             String rawCommand = scanner.nextLine();
             String[] command = rawCommand.split(" ");
+
             switch (command[0]) {
                 case "1":
                     commandsStack.push(rawCommand);
@@ -58,6 +59,7 @@ public class X07SimpleTextEditor {
 
                 case "4":
                     String[] lastCommand = commandsStack.pop().split(" ");
+
                     switch (lastCommand[0]) {
                         case "1":
                             //било е добавяне
@@ -65,6 +67,7 @@ public class X07SimpleTextEditor {
                                executeDelete(text, elementsToDelete);
                             //сега премахваме
                             break;
+
                         case "2":
                             //било е премахване
                             String elementsToAddBack = removedElementsStack.pop();
@@ -79,6 +82,7 @@ public class X07SimpleTextEditor {
     }
 
     private static void executeDelete(StringBuilder text, int countToDelete) {
+
         for (int i = 0; i < countToDelete; i++) {
             text.deleteCharAt(text.length() - 1);
         }
